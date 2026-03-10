@@ -3,6 +3,7 @@ import { calculatePasaran } from './core/pasaran.js';
 import { calculateNeptu } from './core/neptu.js';
 import { calculateKalenderJawa, type KalenderJawaResult } from './core/kalenderJawa.js';
 import { calculatePranataMangsa, type PranataMangsaResult } from './core/pranataMangsa.js';
+import { wetonCalculator, type WetonMonthResult } from './domain/primbon/services/index.js';
 import { getWatak, getWatakTanggalJawa, getWatakBulanJawa, type WatakResult, type BulanWatakResult } from './primbon/watak.js';
 import { calculateJodoh, type JodohResult } from './primbon/jodoh.js';
 import { getHariBaik, type HariBaikResult } from './primbon/hariBaik.js';
@@ -138,6 +139,16 @@ const primbon = {
     const dLahir = ensureDate(tglLahir);
     const dSekarang = ensureDate(tglSekarang);
     return calculateSelapan(dLahir, dSekarang);
+  },
+
+  /**
+   * Mendapatkan tabel weton untuk bulan tertentu.
+   * @param tahun - Tahun Masehi.
+   * @param bulan - Bulan Masehi (1-12).
+   * @returns - Array data weton untuk setiap hari dalam bulan.
+   */
+  wetonMonth: (tahun: number, bulan: number): WetonMonthResult[] => {
+    return wetonCalculator.getWetonMonth(tahun, bulan);
   }
 };
 

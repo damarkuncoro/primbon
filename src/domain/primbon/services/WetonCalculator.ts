@@ -109,6 +109,44 @@ export class WetonCalculator {
     const oneDay = 24 * 60 * 60 * 1000;
     return Math.round((date1.getTime() - date2.getTime()) / oneDay);
   }
+
+  /**
+   * Get weton table for a specific month
+   * @param year - Gregorian year
+   * @param month - Gregorian month (1-12)
+   * @returns Array of weton data for each day in the month
+   */
+  getWetonMonth(year: number, month: number): WetonMonthResult[] {
+    const daysInMonth = new Date(year, month, 0).getDate();
+    const result: WetonMonthResult[] = [];
+
+    for (let day = 1; day <= daysInMonth; day++) {
+      const date = new Date(year, month - 1, day);
+      const weton = this.calculate(date);
+      result.push({
+        tanggal: day,
+        hari: weton.hari,
+        pasaran: weton.pasaran,
+        weton: weton.toString(),
+        neptu: weton.neptu,
+        neptuKamarokam: weton.neptuKamarokam
+      });
+    }
+
+    return result;
+  }
+}
+
+/**
+ * Interface for monthly weton result
+ */
+export interface WetonMonthResult {
+  tanggal: number;
+  hari: string;
+  pasaran: string;
+  weton: string;
+  neptu: number;
+  neptuKamarokam: number;
 }
 
 // Singleton instance for convenience
