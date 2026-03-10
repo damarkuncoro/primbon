@@ -9,15 +9,19 @@ export interface JodohResult {
     pasaran: string;
     weton: string;
     neptu: number;
+    neptuKamarokam?: number;
   };
   personB: {
     hari: string;
     pasaran: string;
     weton: string;
     neptu: number;
+    neptuKamarokam?: number;
   };
   totalNeptu: number;
   sisa: number;
+  totalNeptuKamarokam?: number;
+  sisaKamarokam?: number;
   kategori: string;
   arti: string;
 }

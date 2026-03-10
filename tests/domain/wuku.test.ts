@@ -52,8 +52,25 @@ describe('WukuCalculator', () => {
 
   describe('getWukuName', () => {
     it('should return correct wuku name by index', () => {
+      // First wuku
       expect(calculator.getWukuName(0)).toBe('Sinta');
+      // Last wuku
       expect(calculator.getWukuName(29)).toBe('Watugunung');
+    });
+
+    it('should have all 30 wuku names in correct order', () => {
+      const expectedWuku = [
+        'Sinta', 'Landep', 'Wukir', 'Kurantil', 'Tolu',
+        'Gumbreg', 'Warigalit', 'Warigagung', 'Julungwangi', 'Sungsang',
+        'Galungan', 'Kuningan', 'Langkir', 'Mandasiya', 'Julungpujut',
+        'Pahang', 'Kuruwelut', 'Marakeh', 'Tambir', 'Medangkungan',
+        'Maktal', 'Wuye', 'Manahil', 'Prangbakat', 'Bala',
+        'Wugu', 'Wayang', 'Kelawu', 'Dukut', 'Watugunung'
+      ];
+
+      for (let i = 0; i < 30; i++) {
+        expect(calculator.getWukuName(i)).toBe(expectedWuku[i]);
+      }
     });
   });
 });

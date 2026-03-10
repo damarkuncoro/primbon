@@ -83,11 +83,11 @@ export class WetonCalculator {
    */
   getNeptuPasaranKamarokam(pasaran: string): number {
     const neptuPasaranKamarokam: Record<string, number> = {
-      'Legi': 5,
+      'Legi': 1,
       'Pahing': 3,
-      'Pon': 7,
+      'Pon': 5,
       'Wage': 4,
-      'Kliwon': 8
+      'Kliwon': 2
     };
     return neptuPasaranKamarokam[pasaran] || 0;
   }

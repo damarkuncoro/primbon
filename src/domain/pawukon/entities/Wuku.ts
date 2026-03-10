@@ -20,10 +20,10 @@ export class Wuku {
  * Wuku List - All 30 wuku cycles
  */
 export const WUKU_LIST = [
-  'Sinta', 'Landep', 'Wukir', 'Kurantil', 'Tolu', 'Gumbreg', 'Wariga', 'Warigagung',
-  'Julungwangi', 'Sungsang', 'Galungan', 'Kuningan', 'Langkir', 'Mandasiya', 'Juli',
+  'Sinta', 'Landep', 'Wukir', 'Kurantil', 'Tolu', 'Gumbreg', 'Warigalit', 'Warigagung',
+  'Julungwangi', 'Sungsang', 'Galungan', 'Kuningan', 'Langkir', 'Mandasiya', 'Julungpujut',
   'Pahang', 'Kuruwelut', 'Marakeh', 'Tambir', 'Medangkungan', 'Maktal', 'Wuye',
-  'Manahil', 'Prangbakat', 'Bala', 'Wugu', 'Wayang', 'Kulawu', 'Dukut', 'Watugunung'
+  'Manahil', 'Prangbakat', 'Bala', 'Wugu', 'Wayang', 'Kelawu', 'Dukut', 'Watugunung'
 ] as const;
 
 export type WukuName = typeof WUKU_LIST[number];

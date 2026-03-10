@@ -23,7 +23,11 @@ export class JodohCalculator {
     const totalNeptu = wetonA.neptu + wetonB.neptu;
     const sisa = totalNeptu % JodohCalculator.SISA_MODULO;
 
-    return new JodohResult(wetonA, wetonB, totalNeptu, sisa);
+    // Calculate using Kamarokam neptu values
+    const totalNeptuKamarokam = wetonA.neptuKamarokam + wetonB.neptuKamarokam;
+    const sisaKamarokam = totalNeptuKamarokam % JodohCalculator.SISA_MODULO;
+
+    return new JodohResult(wetonA, wetonB, totalNeptu, sisa, totalNeptuKamarokam, sisaKamarokam);
   }
 }
 
@@ -35,7 +39,9 @@ export class JodohResult {
     public readonly personA: Weton,
     public readonly personB: Weton,
     public readonly totalNeptu: number,
-    public readonly sisa: number
+    public readonly sisa: number,
+    public readonly totalNeptuKamarokam?: number,
+    public readonly sisaKamarokam?: number
   ) {}
 
   get totalNeptuValue(): number {
