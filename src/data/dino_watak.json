@@ -1,0 +1,77 @@
+{
+  "Minggu": {
+    "peredaran": "Matahari",
+    "sifat": [
+      "Hatinya terang",
+      "Ikhlas dalam segala hal untuk sanak saudara",
+      "Keras budinya",
+      "Cinta terhadap sesamanya",
+      "Suci dan pandai berbicara",
+      "Dapat memerintah orang tua"
+    ]
+  },
+  "Senin": {
+    "peredaran": "Bulan",
+    "sifat": [
+      "Senang pada kebenaran",
+      "Ikhlas",
+      "Cekatan dalam segala hal",
+      "Bicaranya tidak dapat dipermainkan"
+    ]
+  },
+  "Selasa": {
+    "peredaran": "Api",
+    "sifat": [
+      "Senang berbohong",
+      "Dibenci orang",
+      "Jika memiliki sahabat hanya sebentar karena bertentangan",
+      "Pembosan",
+      "Cepat meninggalkan segala hal yang sedang dikerjakan"
+    ]
+  },
+  "Rabu": {
+    "peredaran": "Bumi",
+    "sifat": [
+      "Kebaikannya kadang-kadang berlebihan",
+      "Berkecukupan",
+      "Kalau berbicara tegas",
+      "Pendiam",
+      "Jarang memikirkan akibatnya"
+    ]
+  },
+  "Kamis": {
+    "peredaran": "Angin & Petir",
+    "sifat": [
+      "Jodohnya sering meninggal terlebih dahulu",
+      "Bicaranya menakutkan",
+      "Sulit berteman",
+      "Batinnya tidak tulus",
+      "Hatinya lekas panas",
+      "Pemarah",
+      "Senang pujian",
+      "Mudah ditipu dengan kata-kata halus"
+    ]
+  },
+  "Jumat": {
+    "peredaran": "Bintang",
+    "sifat": [
+      "Suka menasehati",
+      "Suka memberi",
+      "Senang mencari kepandaian",
+      "Wataknya halus",
+      "Suka terhadap sanak saudara",
+      "Banyak sahabat yang mencintainya"
+    ]
+  },
+  "Sabtu": {
+    "peredaran": "Air",
+    "sifat": [
+      "Sering dimusuhi orang",
+      "Ditakuti",
+      "Jarang berteman",
+      "Pandai mencari penghidupan (berdagang)",
+      "Semua pekerjaan harus segera dilaksanakan",
+      "Pekerja keras"
+    ]
+  }
+}

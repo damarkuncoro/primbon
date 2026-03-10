@@ -1,0 +1,1 @@
+export type { WukuRepository } from './WukuRepository.js';

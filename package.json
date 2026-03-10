@@ -1,0 +1,58 @@
+{
+  "name": "@damarkuncoro/primbon",
+  "version": "1.0.0",
+  "description": "Library JavaScript berbasis Node.js yang menyediakan algoritma kalender Jawa, weton, primbon, dan perhitungan tradisional Jawa.",
+  "main": "./lib/cjs/index.cjs",
+  "module": "./lib/esm/index.js",
+  "types": "./lib/esm/index.d.ts",
+  "exports": {
+    ".": {
+      "require": {
+        "types": "./lib/cjs/index.d.cts",
+        "default": "./lib/cjs/index.cjs"
+      },
+      "import": {
+        "types": "./lib/esm/index.d.ts",
+        "default": "./lib/esm/index.js"
+      }
+    }
+  },
+  "files": [
+    "lib"
+  ],
+  "type": "module",
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "node --test test/*.test.js",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "keywords": [
+    "jawa",
+    "weton",
+    "primbon",
+    "kalender-jawa",
+    "pasaran",
+    "neptu",
+    "pawukon",
+    "wuku",
+    "javanese",
+    "horoskop",
+    "numerologi"
+  ],
+  "author": "Damar Kuncoro",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/damarkuncoro/primbon.git"
+  },
+  "bugs": {
+    "url": "https://github.com/damarkuncoro/primbon/issues"
+  },
+  "homepage": "https://github.com/damarkuncoro/primbon#readme",
+  "devDependencies": {
+    "@types/node": "^22.13.9",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.2"
+  }
+}

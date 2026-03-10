@@ -1,0 +1,1 @@
+export { JsonWatakRepository, JsonJodohRepository, JsonHariBaikRepository, JsonGarisHidupRepository, JsonWukuRepository, JsonPranataMangsaRepository, watakRepository, jodohRepository, hariBaikRepository, garisHidupRepository, wukuRepository, pranataMangsaRepository } from './JsonDataRepository.js';

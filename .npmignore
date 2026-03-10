@@ -1,0 +1,12 @@
+# .npmignore
+node_modules
+docs
+examples
+src
+dist
+.github
+tsup.config.js
+package-lock.json
+*.md
+!README.md
+!LICENSE
