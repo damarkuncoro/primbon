@@ -1,12 +1,47 @@
-# .npmignore
-node_modules
-docs
-examples
-src
-dist
-.github
-tsup.config.js
-package-lock.json
+# Dependencies
+node_modules/
+
+# Source code
+src/
+
+# Tests
+tests/
+test/
+
+# Build outputs
+dist/
+lib/
+build/
+*.tsbuildinfo
+
+# Documentation
+docs/
 *.md
 !README.md
-!LICENSE
+
+# Development
+.github/
+tsup.config.js
+tsconfig.json
+
+# Package management
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+logs
+*.log
+
+# Environment
+.env
+.env.local
+.env.*.local

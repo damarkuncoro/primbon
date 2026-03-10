@@ -54,5 +54,8 @@
     "@types/node": "^22.13.9",
     "tsup": "^8.4.0",
     "typescript": "^5.8.2"
+  },
+  "dependencies": {
+    "vitest": "^4.0.18"
   }
 }
