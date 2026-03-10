@@ -3,10 +3,13 @@
  * of day of week (hari) and market day (pasaran)
  */
 export class Weton {
+  private _neptuKamarokam?: number;
+
   constructor(
     public readonly hari: string,
     public readonly pasaran: string,
-    public readonly neptu: number
+    public readonly neptu: number,
+    neptuKamarokam?: number
   ) {
     if (!hari) {
       throw new Error('Hari tidak boleh kosong');
@@ -14,10 +17,51 @@ export class Weton {
     if (!pasaran) {
       throw new Error('Pasaran tidak boleh kosong');
     }
+    // Calculate neptuKamarokam if not provided
+    this._neptuKamarokam = neptuKamarokam ?? this.calculateNeptuKamarokam();
+  }
+
+  private calculateNeptuKamarokam(): number {
+    // In Kamarokam, Pahing/Paing has value 3 instead of 9
+    const neptuHari = Weton.getNeptuHariStatic(this.hari);
+    const neptuPasaranKamarokam = Weton.getNeptuPasaranKamarokamStatic(this.pasaran);
+    return neptuHari + neptuPasaranKamarokam;
+  }
+
+  private static getNeptuHariStatic(hari: string): number {
+    const neptuHari: Record<string, number> = {
+      'Minggu': 5,
+      'Senin': 4,
+      'Selasa': 3,
+      'Rabu': 7,
+      'Kamis': 8,
+      'Jumat': 6,
+      'Sabtu': 9
+    };
+    return neptuHari[hari] || 0;
+  }
+
+  private static getNeptuPasaranKamarokamStatic(pasaran: string): number {
+    const neptuPasaranKamarokam: Record<string, number> = {
+      'Legi': 5,
+      'Pahing': 3,
+      'Pon': 7,
+      'Wage': 4,
+      'Kliwon': 8
+    };
+    return neptuPasaranKamarokam[pasaran] || 0;
+  }
+
+  get neptuKamarokam(): number {
+    return this._neptuKamarokam ?? this.neptu;
   }
 
   get nilai(): number {
     return this.neptu;
+  }
+
+  get nilaiKamarokam(): number {
+    return this.neptuKamarokam;
   }
 
   toString(): string {

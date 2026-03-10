@@ -22,9 +22,9 @@ describe('WetonCalculator', () => {
   });
 
   describe('getPasaran', () => {
-    it('should return Legi for base date 1900-01-01', () => {
+    it('should return Pahing for base date 1900-01-01', () => {
       const date = new Date(1900, 0, 1);
-      expect(calculator.getPasaran(date)).toBe('Legi');
+      expect(calculator.getPasaran(date)).toBe('Pahing');
     });
   });
 

@@ -5,6 +5,7 @@ export interface WetonResult {
   pasaran: string;
   weton: string;
   neptu: number;
+  neptuKamarokam?: number;
 }
 
 /**
@@ -19,6 +20,7 @@ export const calculateWeton = (date: Date): WetonResult => {
     hari: weton.hari,
     pasaran: weton.pasaran,
     weton: weton.toString(),
-    neptu: weton.neptu
+    neptu: weton.neptu,
+    neptuKamarokam: weton.neptuKamarokam
   };
 };
