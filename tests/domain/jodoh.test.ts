@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { JodohCalculator } from '../../src/domain/primbon/services/JodohCalculator.js';
+import { JodohCalculator } from '../../src/domain/primbon/services/JodohCalculator';
 
 describe('JodohCalculator', () => {
   const calculator = new JodohCalculator();

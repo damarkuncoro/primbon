@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
-import { WukuCalculator } from '../../src/domain/pawukon/services/WukuCalculator.js';
-import { WUKU_LIST } from '../../src/domain/pawukon/entities/Wuku.js';
+import { WukuCalculator } from '../../src/domain/pawukon/services/WukuCalculator';
+import { WUKU_LIST } from '../../src/domain/pawukon/entities/Wuku';
 
 describe('WukuCalculator', () => {
   const calculator = new WukuCalculator();

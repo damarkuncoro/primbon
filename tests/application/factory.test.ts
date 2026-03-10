@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { PrimbonFactory } from '../../src/application/PrimbonFactory.js';
+import { PrimbonFactory } from '../../src/application/PrimbonFactory';
 
 describe('PrimbonFactory', () => {
   describe('createWatakUseCase', () => {

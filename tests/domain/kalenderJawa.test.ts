@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { KalenderJawaCalculator } from '../../src/domain/primbon/services/KalenderJawaCalculator.js';
+import { KalenderJawaCalculator } from '../../src/domain/primbon/services/KalenderJawaCalculator';
 
 describe('KalenderJawaCalculator', () => {
   const calculator = new KalenderJawaCalculator();

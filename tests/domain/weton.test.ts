@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { WetonCalculator } from '../../src/domain/primbon/services/WetonCalculator.js';
+import { WetonCalculator } from '../../src/domain/primbon/services/WetonCalculator';
 
 describe('WetonCalculator', () => {
   const calculator = new WetonCalculator();

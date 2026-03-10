@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { GarisHidupCalculator } from '../../src/domain/primbon/services/GarisHidupCalculator.js';
+import { GarisHidupCalculator } from '../../src/domain/primbon/services/GarisHidupCalculator';
 
 describe('GarisHidupCalculator', () => {
   const calculator = new GarisHidupCalculator();

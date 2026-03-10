@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
-import { Weton } from '../../src/domain/primbon/entities/Weton.js';
-import { TanggalJawa } from '../../src/domain/primbon/entities/TanggalJawa.js';
+import { Weton } from '../../src/domain/primbon/entities/Weton';
+import { TanggalJawa } from '../../src/domain/primbon/entities/TanggalJawa';
 
 describe('Domain Entities', () => {
   describe('Weton', () => {

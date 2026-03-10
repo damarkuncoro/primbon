@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { SelapanCalculator } from '../../src/domain/pawukon/services/SelapanCalculator.js';
+import { SelapanCalculator } from '../../src/domain/pawukon/services/SelapanCalculator';
 
 describe('SelapanCalculator', () => {
   const calculator = new SelapanCalculator();

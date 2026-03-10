@@ -33,7 +33,7 @@ export class WetonCalculator {
    */
   getPasaran(date: Date): string {
     const diffDays = this.diffDays(date, WetonCalculator.BASE_DATE);
-    const index = (diffDays + 1) % 5;
+    const index = diffDays % 5;
     return WetonCalculator.PASARAN_NAMES[index];
   }
 
