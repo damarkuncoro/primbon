@@ -9,6 +9,7 @@ import { calculateJodoh, type JodohResult } from './primbon/jodoh.js';
 import { getHariBaik, type HariBaikResult } from './primbon/hariBaik.js';
 import { getGarisHidup, type GarisHidupResult } from './primbon/garisHidup.js';
 import { calculateWuku, type WukuResult } from './pawukon/wuku.js';
+import { wukuCalculator, type WukuMonthResult } from './domain/pawukon/index.js';
 import { calculateSelapan, type SelapanResult } from './pawukon/siklus35.js';
 import { ensureDate } from './utils/date.js';
 import { preloadAllData } from './utils/dataLoader.js';
@@ -149,6 +150,16 @@ const primbon = {
    */
   wetonMonth: (tahun: number, bulan: number): WetonMonthResult[] => {
     return wetonCalculator.getWetonMonth(tahun, bulan);
+  },
+
+  /**
+   * Mendapatkan tabel wuku untuk bulan tertentu.
+   * @param tahun - Tahun Masehi.
+   * @param bulan - Bulan Masehi (1-12).
+   * @returns - Array data wuku untuk setiap hari dalam bulan.
+   */
+  wukuMonth: (tahun: number, bulan: number): WukuMonthResult[] => {
+    return wukuCalculator.getWukuMonth(tahun, bulan);
   }
 };
 
