@@ -1,0 +1,39 @@
+export interface JodohResult {
+  kategori: string;
+  arti: string;
+}
+
+export const jodohData: Record<string, JodohResult> = {
+  "1": {
+    kategori: "Pegat",
+    arti: "Masalah ekonomi, kekuasaan, atau perselingkuhan yang bisa menyebabkan perceraian (pegat)."
+  },
+  "2": {
+    kategori: "Ratu",
+    arti: "Pasangan yang memang sudah jodohnya. Dihormati tetangga dan lingkungan sekitar."
+  },
+  "3": {
+    kategori: "Jodoh",
+    arti: "Pasangan yang cocok dan bisa menerima kelebihan serta kekurangan masing-masing."
+  },
+  "4": {
+    kategori: "Topo",
+    arti: "Awalnya akan mengalami kesusahan, namun akan bahagia pada akhirnya."
+  },
+  "5": {
+    kategori: "Tinari",
+    arti: "Akan menemukan kebahagiaan, rezeki yang berkecukupan, dan sering mendapat keberuntungan."
+  },
+  "6": {
+    kategori: "Padu",
+    arti: "Sering mengalami pertengkaran, namun tidak sampai bercerai."
+  },
+  "7": {
+    kategori: "Sujanan",
+    arti: "Sering mengalami pertengkaran dan masalah perselingkuhan."
+  },
+  "0": {
+    kategori: "Pesthi",
+    arti: "Kehidupan rumah tangga akan rukun, tenteram, dan damai sampai tua."
+  }
+};
