@@ -37,11 +37,16 @@ import {
   calculateSadwara,
   calculateAsatawara,
   calculateSangawara,
+  calculateLintang,
+  calculateHariNaas,
+  calculateSiklusRejeki,
   setLocale,
   getLocale,
   getTranslations,
   getKitabInfo,
-  getAllKitabReferences
+  getAllKitabReferences,
+  registerPlugin,
+  createPlugin
 } from '@damarkuncoro/primbon';
 import { GoogleGenAI, Modality } from "@google/genai";
 import { 
@@ -70,7 +75,7 @@ interface WetonData {
 }
 
 export default function App() {
-  const [activeTab, setActiveTab] = useState<'weton' | 'jodoh' | 'mangsa' | 'haribaik' | 'sadwara' | 'asatawara' | 'sangawara' | 'kitab' | 'ai'>('weton');
+  const [activeTab, setActiveTab] = useState<'weton' | 'jodoh' | 'mangsa' | 'haribaik' | 'sadwara' | 'asatawara' | 'sangawara' | 'lintang' | 'harinaas' | 'siklusrejeki' | 'kitab' | 'ai'>('weton');
   const [birthDate, setBirthDate] = useState<string>(new Date().toISOString().split('T')[0]);
   const [partnerDate, setPartnerDate] = useState<string>(new Date().toISOString().split('T')[0]);
   const [keperluan, setKeperluan] = useState<string>('nikah');
@@ -98,6 +103,15 @@ export default function App() {
   const sadwara = useMemo(() => calculateSadwara(new Date(birthDate)), [birthDate]);
   const asatawara = useMemo(() => calculateAsatawara(new Date(birthDate)), [birthDate]);
   const sangawara = useMemo(() => calculateSangawara(new Date(birthDate)), [birthDate]);
+  
+  // New: Lintang (Zodiak Jawa)
+  const lintang = useMemo(() => calculateLintang(new Date(birthDate)), [birthDate]);
+  
+  // New: Hari Naas
+  const hariNaas = useMemo(() => calculateHariNaas(new Date(birthDate)), [birthDate]);
+  
+  // New: Siklus Rejeki
+  const siklusRejeki = useMemo(() => calculateSiklusRejeki(new Date(birthDate)), [birthDate]);
   
   // Get all kitab references
   const kitabReferences = useMemo(() => getAllKitabReferences(), []);
@@ -264,6 +278,9 @@ export default function App() {
             { id: 'sadwara', label: 'Paringkelan', icon: Calendar },
             { id: 'asatawara', label: 'Padewan', icon: Calendar },
             { id: 'sangawara', label: 'Padangon', icon: Calendar },
+            { id: 'lintang', label: 'Lintang', icon: Sparkles },
+            { id: 'harinaas', label: 'Hari Naas', icon: Calendar },
+            { id: 'siklusrejeki', label: 'Siklus Rejeki', icon: TrendingUp },
             { id: 'kitab', label: 'Kitab', icon: Scroll },
             { id: 'haribaik', label: 'Hari Baik', icon: Sparkles },
             { id: 'ai', label: 'Tanya AI', icon: MessageSquare },
@@ -602,6 +619,108 @@ export default function App() {
             </motion.div>
           )}
 
+          {/* Sadwara Tab */}
+          {activeTab === 'sadwara' && (
+            <motion.div
+              key="sadwara"
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -20 }}
+              className="space-y-8"
+            >
+              <div className="bg-white rounded-[32px] p-10 shadow-sm border border-[#5A5A40]/5">
+                <h3 className="text-xs uppercase tracking-[0.3em] text-[#5A5A40] mb-6 font-bold">Paringkelan (Sadwara) - Siklus 6 Harian</h3>
+                <div className="text-center mb-8">
+                  <p className="text-5xl font-bold text-[#5A5A40] mb-2">{sadwara.nama}</p>
+                  <p className="text-[#5A5A40]/60">Neptu: {sadwara.neptu}</p>
+                </div>
+                <div className="bg-[#f5f5f0] rounded-2xl p-6">
+                  <h4 className="text-sm font-bold mb-3">Watak:</h4>
+                  <p className="text-lg mb-4">{sadwara.watak}</p>
+                  <p className="text-[#2c2c24]/80 leading-relaxed">{sadwara.deskripsi}</p>
+                </div>
+              </div>
+            </motion.div>
+          )}
+
+          {/* Asatawara Tab */}
+          {activeTab === 'asatawara' && (
+            <motion.div
+              key="asatawara"
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -20 }}
+              className="space-y-8"
+            >
+              <div className="bg-white rounded-[32px] p-10 shadow-sm border border-[#5A5A40]/5">
+                <h3 className="text-xs uppercase tracking-[0.3em] text-[#5A5A40] mb-6 font-bold">Padewan (Asatawara) - Siklus 8 Harian</h3>
+                <div className="text-center mb-8">
+                  <p className="text-5xl font-bold text-[#5A5A40] mb-2">{asatawara.nama}</p>
+                  <p className="text-[#5A5A40]/60">Neptu: {asatawara.neptu}</p>
+                </div>
+                <div className="bg-[#f5f5f0] rounded-2xl p-6">
+                  <h4 className="text-sm font-bold mb-3">Watak:</h4>
+                  <p className="text-lg mb-4">{asatawara.watak}</p>
+                  <p className="text-[#2c2c24]/80 leading-relaxed">{asatawara.deskripsi}</p>
+                </div>
+              </div>
+            </motion.div>
+          )}
+
+          {/* Sangawara Tab */}
+          {activeTab === 'sangawara' && (
+            <motion.div
+              key="sangawara"
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -20 }}
+              className="space-y-8"
+            >
+              <div className="bg-white rounded-[32px] p-10 shadow-sm border border-[#5A5A40]/5">
+                <h3 className="text-xs uppercase tracking-[0.3em] text-[#5A5A40] mb-6 font-bold">Padangon (Sangawara) - Siklus 9 Harian</h3>
+                <div className="text-center mb-8">
+                  <p className="text-5xl font-bold text-[#5A5A40] mb-2">{sangawara.nama}</p>
+                  <p className="text-[#5A5A40]/60">Neptu: {sangawara.neptu}</p>
+                </div>
+                <div className="bg-[#f5f5f0] rounded-2xl p-6">
+                  <h4 className="text-sm font-bold mb-3">Watak:</h4>
+                  <p className="text-lg mb-4">{sangawara.watak}</p>
+                  <p className="text-[#2c2c24]/80 leading-relaxed">{sangawara.deskripsi}</p>
+                </div>
+              </div>
+            </motion.div>
+          )}
+
+          {/* Kitab Tab */}
+          {activeTab === 'kitab' && (
+            <motion.div
+              key="kitab"
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -20 }}
+              className="space-y-8"
+            >
+              <div className="bg-white rounded-[32px] p-10 shadow-sm border border-[#5A5A40]/5">
+                <h3 className="text-xs uppercase tracking-[0.3em] text-[#5A5A40] mb-6 font-bold">Referensi Kitab Primbon</h3>
+                <div className="grid gap-4">
+                  {kitabReferences.map((kitab: any, i: number) => (
+                    <div key={i} className="bg-[#f5f5f0] rounded-2xl p-6">
+                      <div className="flex items-center gap-3 mb-2">
+                        <span className="px-3 py-1 bg-[#5A5A40] text-white rounded-full text-xs font-bold">
+                          {kitab.nama}
+                        </span>
+                        {kitab.tahun && (
+                          <span className="text-xs text-[#5A5A40]/60">{kitab.tahun}</span>
+                        )}
+                      </div>
+                      <p className="text-sm text-[#2c2c24]/80">{kitab.deskripsi}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          )}
+
           {activeTab === 'haribaik' && (
             <motion.div
               key="haribaik"
@@ -735,6 +854,117 @@ export default function App() {
                     </div>
                   </div>
                 )}
+              </div>
+            </motion.div>
+          )}
+
+          {/* Lintang Tab */}
+          {activeTab === 'lintang' && (
+            <motion.div
+              key="lintang"
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -20 }}
+              className="space-y-8"
+            >
+              <div className="bg-gradient-to-br from-[#5A5A40] to-[#3d3d2d] text-white rounded-[32px] p-10 shadow-lg">
+                <h3 className="text-xs uppercase tracking-[0.3em] text-white/60 mb-6 font-bold">Lintang (Bintang Lahir)</h3>
+                <div className="flex flex-col md:flex-row gap-8 items-center">
+                  <div className="w-32 h-32 bg-white/10 rounded-full flex items-center justify-center">
+                    <Sparkles size={64} />
+                  </div>
+                  <div className="flex-1 text-center md:text-left">
+                    <p className="text-5xl font-bold mb-2">{lintang.nama}</p>
+                    <p className="text-white/70 italic">{lintang.candra}</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="bg-white rounded-[32px] p-8 shadow-sm border border-[#5A5A40]/5">
+                  <h4 className="text-xs uppercase tracking-widest text-[#5A5A40] mb-4 font-bold">Watak</h4>
+                  <p className="text-lg leading-relaxed">{lintang.watak}</p>
+                </div>
+                <div className="bg-white rounded-[32px] p-8 shadow-sm border border-[#5A5A40]/5">
+                  <h4 className="text-xs uppercase tracking-widest text-[#5A5A40] mb-4 font-bold">Sifat</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {lintang.sifat?.map((s, i) => (
+                      <span key={i} className="px-4 py-1.5 bg-[#f5f5f0] text-[#5A5A40] rounded-full text-sm font-medium">
+                        {s}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-[32px] p-8 shadow-sm border border-[#5A5A40]/5">
+                <h4 className="text-xs uppercase tracking-widest text-[#5A5A40] mb-4 font-bold">Kompatibilitas</h4>
+                <div className="flex flex-wrap gap-2">
+                  {lintang.kompatibel?.map((k, i) => (
+                    <span key={i} className="px-4 py-1.5 bg-[#5A5A40]/10 text-[#5A5A40] rounded-full text-sm">
+                      {k}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          )}
+
+          {/* Hari Naas Tab */}
+          {activeTab === 'harinaas' && (
+            <motion.div
+              key="harinaas"
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -20 }}
+              className="space-y-8"
+            >
+              <div className="bg-white rounded-[32px] p-10 shadow-sm border border-[#5A5A40]/5">
+                <h3 className="text-xs uppercase tracking-[0.3em] text-[#5A5A40] mb-6 font-bold">Hari Naas (Hari Kewaspadaan)</h3>
+                <div className="text-center mb-8">
+                  <p className="text-5xl font-bold text-[#5A5A40] mb-2">{hariNaas.nama}</p>
+                  <p className="text-[#5A5A40]/60 italic">{hariNaas.candra}</p>
+                </div>
+                <div className="bg-[#f5f5f0] rounded-2xl p-6">
+                  <h4 className="text-sm font-bold mb-3">Peringatan:</h4>
+                  <p className="text-[#2c2c24]/80 leading-relaxed">{hariNaas.peringatan}</p>
+                </div>
+              </div>
+            </motion.div>
+          )}
+
+          {/* Siklus Rejeki Tab */}
+          {activeTab === 'siklusrejeki' && (
+            <motion.div
+              key="siklusrejeki"
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -20 }}
+              className="space-y-8"
+            >
+              <div className="bg-white rounded-[32px] p-10 shadow-sm border border-[#5A5A40]/5">
+                <h3 className="text-xs uppercase tracking-[0.3em] text-[#5A5A40] mb-6 font-bold">Siklus Rejeki (Pal Srigati)</h3>
+                <div className="h-[300px] w-full">
+                  <ResponsiveContainer width="100%" height="100%">
+                    <AreaChart data={siklusRejeki.grafik}>
+                      <defs>
+                        <linearGradient id="colorRejeki" x1="0" y1="0" x2="0" y2="1">
+                          <stop offset="5%" stopColor="#5A5A40" stopOpacity={0.8}/>
+                          <stop offset="95%" stopColor="#5A5A40" stopOpacity={0}/>
+                        </linearGradient>
+                      </defs>
+                      <XAxis dataKey="usia" />
+                      <YAxis hide />
+                      <Tooltip />
+                      <Area type="monotone" dataKey="level" stroke="#5A5A40" fillOpacity={1} fill="url(#colorRejeki)" />
+                    </AreaChart>
+                  </ResponsiveContainer>
+                </div>
+                <div className="mt-6 text-center">
+                  <p className="text-sm text-[#5A5A40]/60">
+                    Siklus rejeki berdasarkan usia. Setiap 10 tahun terjadi pergantian phase rejeki.
+                  </p>
+                </div>
               </div>
             </motion.div>
           )}
