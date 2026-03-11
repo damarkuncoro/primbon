@@ -44,6 +44,17 @@ import {
   type KitabInfo
 } from './domain/primbon/references.js';
 
+// Plugin system imports
+import {
+  registerPlugin,
+  unregisterPlugin,
+  getPlugin,
+  getAllPlugins,
+  hasPlugin,
+  createPlugin,
+  type PrimbonPlugin,
+  type DateInput
+} from './plugin/index.js';
 // Preload semua data saat modul di-import untuk performa
 preloadAllData();
 
@@ -386,5 +397,15 @@ export {
   type HariNaasResult,
   type SiklusRejekiResult,
   type RejekiPoint,
-  type LintangResult
+  type LintangResult,
+  
+  // Plugin System
+  registerPlugin,
+  unregisterPlugin,
+  getPlugin,
+  getAllPlugins,
+  hasPlugin,
+  createPlugin,
+  type PrimbonPlugin,
+  type DateInput
 };
