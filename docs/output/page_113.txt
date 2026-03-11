@@ -1,0 +1,57 @@
+No. 132. Naga Bulan.
+
+ 
+
+ 
+
+ 
+
+ 
+
+Jika bulan : Naga berada di :
+Puasa, Sawal, Dulkaidah Selatan
+Besar, Sura, Sapar .— Barat
+Rabiulawal, Rabiulakir, Jumadilawal Utara.
+Jumadilakir, Rejeb, Ruwah Timur.
+
+No. 133. Naga Tahun
+
+Jika bulan : Naga berada di :
+Besar, Sura, Sapar Utara.
+Rabiulawal, Rabiulakir, Jumadilawal Timur.
+Jumadilakir, Rejeb, Ruwah Selatan.
+Puasa, Sawal, Dulkaidah Barat.
+
+ 
+
+No. 134. Naga Jatingarang.
+
+ 
+
+ 
+   
+
+Jika bulan : Naga berada di :
+
+Sura, Sapar, Rabiulawal Timur
+
+Rabiulakir, Jumadilawal, Jumadilakir Selatan
+Rejeb, Ruwah, Puasa Barat.
+Sawal, Dulkaidah, Besar Utara.
+
+ 
+
+No. 135. Naga Tahun dan Jatingarang berada di suatu tempat.
+
+ 
+
+Jika bulan : Naga berada di :
+Besar : Utara.
+Rabiulawal Timur.
+Jumadilakir Selatan.
+Puasa Barat.
+
+ 
+
+113
+

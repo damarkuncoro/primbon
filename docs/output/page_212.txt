@@ -1,0 +1,41 @@
+but dan jumlah tersebut bagilah dengan bilangan tiga. Jika :
+habis, tidak akan berhasil.
+bersisa 1, akan berhasil.
+bersisa 2, belum tentu berhasil.
+
+Catatan :
+Catatan : Misalkan si penjahat lahir pada hari kamis legi, neptu
+. kamis dan legi - 8 # 5 - 13. Akan melakukan operasi pada hari selasa
+kliwon, maka neptu selasa dan kliwon - 3 4 8 - 11. Jumlah neptu
+semuanya - 13 # 11 - 24. Dibagi dengan bilangan 3, maka tidak akan
+bersisa hal ini berarti operasinya tidak akan berhasil.
+
+ 
+
+No. 270 Jika Penjahat akan beroperasi ( II )
+
+Jumlahkanlah neptu hari dan pekan yang akan dipergunakan
+ditambah dengan neptu hurup muka dari namanya kampung (desa) di
+mana operasi tersebut akan dilakukan, jumlahnya bagilah dengan 3.
+Jika :
+
+habis, akan berhasil.
+
+sisa 1, tidak akan berhasil bahkan dapat juga tewas.
+
+sisa 2, belum tentu berhasil bahkan kemungkinan tertangkap.
+
+Catatan : Misalkan melakukan pada malam jum'at legi di desa
+
+na as ,m .i
+
+(kajoran), neptu Jum'at dan legi - 6 #5 - 11, ditambah dengan nama
+desa kajoran tersebut dimana huruf paling depan «am  neptunya 5,
+maka 11 # 5 - 16. Jika dibagi 3 akan bersisa 1, di mana operasi
+tersebut tidak akan berhasil bahkan dapat berakibat tewas. Neptu
+hari dan pekan seperti dalam No. 2 sedangkan neptu huruf :
+M-5l:m 5-2: M3: demikian seterusnya dengan huruf jawa yang
+berjumlah 20.
+
+212
+

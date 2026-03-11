@@ -1,0 +1,51 @@
+No. 196. Membuat pintu halaman (III)
+
+Perhitungannya berbeda dengan yang terdahulu : ukurlah pan-
+jang tempat yang akan diberi pintu dan bagilah dengan 9. Jika pintu
+menghadap selatan, hitungan mulai dari timur. Jika menghadap
+barat, hitungan dari sebelah Utara. Jika menghadap Utara, hitungan
+mulai dari Barat. Jika menghadap timur, hitungan mulai dari selatan
+(lihat urutan nomor pada gambar di bawah ini) :
+
+ 
+
+Keterangan :
+SINIOIEeIluloinlo Ia
+1 9
+2 8
+3 7
+4 6
+5 5
+6 4
+7 3
+8 2
+9 1
+OloNnjolule lola l—
+
+1. Bumi, baik
+
+2. Kreta, baik
+
+3. Kala, jelek
+
+4. Kali, jelek
+
+5. Bumi, baik
+
+6. Kreta, baik
+
+7. Kala, jelek
+
+8. Kali, jelek
+
+9. Bumi, baik
+
+Catatan :
+
+Perhitungan untuk membuat pintu halaman ada 3 macam, perbedaan-
+nyapun ada, silahkan pilih salah satu asalkan jatuh pada yang baik.
+
+ 
+
+149
+

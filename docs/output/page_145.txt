@@ -1,0 +1,37 @@
+No. 189. Membuat kerangka Rumah.
+
+Perhitungannya memakai telapak kaki, yang membuat rumah, jika
+jatuh Dea: Sri, Kitri, Gana, Liyu, Pokah, ini berarti :
+
+Sri sebaiknya buatlah rangka untuk rumah belakang.
+Kitri : sebaiknya buatlah rangka untuk pendapa/teras.
+Gana : sebaiknya buatlah rangka untuk Dapur, gandok/
+kandang.
+
+Liyu : sebaiknya buatlah rangka untuk Regol (pintu gerbang
+dan bangsa pasowanan).
+
+Pokah : sebaiknya buatlah rangka untuk lumbung/gudang.
+
+ 
+
+No. 190.Hari untuk memasang pintu.
+
+Jika jatuh pada hari :
+
+Jum'at, ..... pasanglah pintu
+Sabtu, ..... pasanglah pintu
+Rabu una pasanglah pintu
+Kamis, ..... pasanglah pintu
+
+: rumah.
+
+: samping (belakang).
+
+: gandok (rumah samping).
+: Regol (pintu gerbang).
+
+ 
+
+145
+

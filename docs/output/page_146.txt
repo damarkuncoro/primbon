@@ -1,0 +1,37 @@
+No. 191. Membuat Tangga (I)
+
+Jika akan membuat tangga, hitunglah jumlah anak tangga yang
+akan dipasang sebagai berikut : anda, ende, deyog.
+Jika jatuh pada :
+anda, ini berarti baik.
+ende, cepat rusak dan sering dipinjam.
+deyog, tangga yang jahat, karena sering berakibat
+jatuh jika dipergunakan. |
+
+No. 192. Membuat Tangga (II).
+
+Hitunglah anak tangga sebagai berikut : anda, ende, undu.
+Jika jatuh pada :
+anda, maka sering dipinjam.
+ende, maka sering dipakai untuk memikul jenazah.
+undu, yang empunya sering jatuh sakit.
+
+ 
+
+No. 193. Membuat balai-balai.
+
+Sebelum dipasang, hitunglah terlebih dahulu berapa banyak
+dlika / galar / plupuhnya, dengan cara : dlika, wangke, wangkong.
+Jika jatuh pada :
+
+PIN KAtensoken nenek adera maka yang empunya balai-balai tersebut se-
+ring menderita sakit.
+
+WANgKe Dertericibindunenno maka yang empunya balai-balai tersebut se-
+ring menderita kematian.
+
+Wangkong................ maka balai-balai tersebut sering jadi tempat
+tidur famili.
+
+146
+

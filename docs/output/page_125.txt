@@ -1,0 +1,63 @@
+No. 154. Hari yang hidup/mati
+
+Untuk mencari matapencaharian, pilihlah tempat dimana terletak
+hari yang hidup, seperti di bawah ini :
+
+ 
+
+   
+
+     
+
+Hidup di arah Dilarang ke Mati di arah
+
+    
+  
+  
+  
+  
+    
+
+   
+    
+   
+ 
+
+   
+  
+  
+  
+  
+  
+ 
+
+Selatan/Timur Utara Barat
+Senin Selatan Timur/Barat Utara
+Selasa Utara Selatan/Timur Barat
+Rabu Utara/Timur Barat Selatan
+Kamis Selatan/Timur Barat Utara
+Jum'at Utara Timur/Barat Selatan
+Sabtu Barat Selatan/Timur Utara
+
+Catatan : Jika pada hari Ahad untuk berdagang, agar mendapat-
+kan keuntungan/laku maka harus pergi menuju arah selatan/ timur.
+
+ 
+
+No. 155. Arah bepergian mencari sandhang Pangan
+dan lain-lainnya
+
+Jika neptu hari
+
+Selamat | Mati
+
+ 
+
+Keterangan : Memilih arah agar jatuh pada hidup atau selamat,
+misalnya hendak bepergian pada hari Sabtu Paing, neptunya 9 dan 9
+jumlahnya 18, jadi arahnya harus ke Utara seperti No. 2.
+
+ 
+
+125
+

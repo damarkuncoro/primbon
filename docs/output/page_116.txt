@@ -1,0 +1,51 @@
+No. 141. Bepergian Jauh
+
+Jika ingin bepergian jauh, perhitungkan jumlah neptu hari dan
+pekan/pasaran den ngan : Suku, Watu, Gajah, Baya, Ratu. Yang bak jika
+jatuh pada : Gajah dan Ratu, tetapi perginya hendaklah tidak menuju
+ke arah tempat berdiamnya Kala (tempat yang terlarang).
+
+Jika jumlah perhitungannya neptu adalah 7 maka Kala berada di
+Barat Daya.
+
+Jika jumlah neptu adalah 2 maka Kala berada di Barat Daya.
+
+" 1 » 3 Barat Laut.
+
+e . " z 5 Naa ipa P " Timur Laut.
+" " " " 1 1 " “ " " Timur.
+
+2 x " a NB anak, Meat - " Tenggara.
+
+e 2 G n 13 4 3 2 " Barat Daya.
+e - P ? 14 » » 1 " Barat Laut.
+" " " " 15 " “ " “ Timur.
+
+" " " " 16 " " " “ Timur.
+
+" " " " 17 " " " “ Tenggara.
+
+x " " o 18 £ . 1 " Barat Laut.
+
+Catatan : misalkan bepergian pada hari Jum'at Pon, hal itu berati baik
+karena neptu Jum'at - 6 sedangkan Pon - 7, jumlah keduanya -6 47
+- 13 yang perhitungannya jatuh pada Gajah. Akan tetapi berangkat-
+na Sean menuju ke arah Kala. Misal, hari Ahad Wage, neptunya -
+dan 4 - 9, hitungannya jatuh pada Baya, tidak baik. Demikian
+
+Ka ansa STAN ea TnT ana
+
+No. 142. Beperbegian (III)
+
+Jika bepergian, terlebih lagi jika melalui jalan yang berbahaya agar
+supaya selamat baiklah membaca mantera : Kun payakun selamet
+rahayu saking pangandikaning Allah, luputa sanjata tawa aa
+kira-kira luputa ing bilahi kabeh, laila haillollah Mohamm
+Rasululllah, si biyung ana ngarepku sibapa ana mburiku, sinini ina
+tengenku sikaki ana kiwaku.Jabaril, Ngijrail, Ngisrail, aja pada lelu-
+ngan: resksanen aku, salalahu ngalaihi wasalam.
+
+ 
+
+116
+

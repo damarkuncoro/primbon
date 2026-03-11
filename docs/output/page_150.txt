@@ -1,0 +1,41 @@
+No, 197. Membuat sumur (I).
+
+Perhitungannya, dimulai dari tengah lantai hingga ke tempat
+sumur dengan ukuran panjang kedua lengan (depa). Cara menghi-
+tungnya :
+
+1. depa-- sri
+
+2. depa - donya
+3. depazarta
+
+4.  depa - suwarga
+5.  depa - neraka
+6. depa-sri
+
+7.  depa - donya
+
+Catatan : perhitungannya hanya sampai pada 5 - neraka, sete-
+lah bilangan 6 kembali kepada sri, demikian seterusnya ......... Jika
+jatuh pada hitungan sri, maka air sumur tersebut sering diambil
+orang : sedangkan jika jatuh pada donya, maka sering menderita kehi-
+langan : sedangkan jika jatuh pada arta, sering kering : jika jatuh pada
+suwarga, berarti baik : dan jika jatuh pada hitungan neraka, sering
+kemasuk@1 orang. Dimisalkan : letaknya sumur dari tengah lantai
+rumah ada 19 depa, 24 depa, 29 depa maka hal tersebut perhitungan-
+nya jatuh pada suwarga, dimana hal seperti ini berarti baik.
+
+ 
+
+No. 198. Membuat sumur (II)
+
+Rumah menghadap Selatan. Rumah menghadap Utara.
+
+ 
+
+   
+
+O Letaknya sumur
+
+150
+

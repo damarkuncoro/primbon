@@ -1,0 +1,64 @@
+No. 287 Bertemu/tidaknya orang yang lari dari rumah
+
+Jumlahkanlah neptu hari dan pekan tatkala ia pergi dan bagilah
+dengan 3, berapakah sisanya.
+
+Jika bersisa 1, tidak dapat di ketemukan
+
+Jika bersisa 2, dapat di ketemukan
+
+Jika bersisa 3, telah jauh perginya (lepas parane)
+
+ 
+
+No. 288 Ketemu/tidaknya barang yang hilang
+
+Jumlahkan neptu hari dan pekan ketika kehilangan dan bagilah
+dengan bilangan 3, jika bersisa :
+
+1. maka barang tersebut tidak dapat di ketemukan.
+
+2. maka barang tersebut dapat di ketemukan.
+
+3. maka barang tersebut tidak dapat di ketemukan, tetapi si
+pencuri jatuh sakit.
+
+ 
+
+No. 289 Mengetahui si Pencuri
+
+Jumlahkan neptu hari dan pekan ketika kehilangan dan bagilah
+dengan bilangan 3, jika bersisa :
+
+- 1. maka si pencuri adalah teman sendiri.
+2. maka si pencuri adalah orang yang serumah.
+3. maka si pencuri adalah orang yang jauh
+
+ 
+
+No. 290 Yang mencuri Pria/Wanita.
+
+Jumlahkan neptu hari dan pekan ketika kehilangan dan bagilah
+dengan bilangan 3, jika bersisa :
+
+1, si pencuri adalah pria.
+
+2. si pencuri adalah Wanita.
+
+3. si pencuri adalah kurang jelas (dapat pria/wanita)
+
+ 
+
+No. 291 Warna tubuh si pencuri
+
+Jumlahkan neptu hari dan pekan ketika kehilangan dan bagilah
+dengan bilangan 3, jika bersisa :
+
+l. si pencuri warna tubuhnya hitam.
+2. si pencuri warna tubuhnya mbambang awak (kemerahan)
+3. si pencuri warna tubuhnya agak putih
+
+ 
+
+222
+
