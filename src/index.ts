@@ -8,6 +8,7 @@ import { calculateAsatawara, type AsatawaraResult, ASATAWARA_NAMES } from './cor
 import { calculateSangawara, type SangawaraResult, SANGAWARA_NAMES } from './core/sangawara.js';
 import { calculateHariNaas, type HariNaasResult, getAllHariNaas, HARI_NAAS_NAMES } from './core/hariNaas.js';
 import { calculateSiklusRejeki, getRejekiByUsia, type SiklusRejekiResult, type RejekiPoint } from './core/siklusRejeki.js';
+import { calculateLintang, getLintangByYear, type LintangResult, LINTANG_NAMES } from './core/lintang.js';
 import { wetonCalculator, type WetonMonthResult } from './domain/primbon/services/index.js';
 import { getWatak, getWatakTanggalJawa, getWatakBulanJawa, type WatakResult, type BulanWatakResult } from './primbon/watak.js';
 import { calculateJodoh, type JodohResult } from './primbon/jodoh.js';
@@ -256,7 +257,54 @@ const primbon = {
   /**
    * Mendapatkan daftar semua kitab referensi.
    */
-  getAllKitabReferences: (): KitabInfo[] => getAllKitabReferences()
+  getAllKitabReferences: (): KitabInfo[] => getAllKitabReferences(),
+
+  /**
+   * Menghitung Hari Naas (Hari Kewaspadaan).
+   * @param tanggal - Tanggal lahir.
+   * @returns - Informasi Hari Naas lengkap.
+   */
+  hariNaas: (tanggal: Date | string | number): HariNaasResult => {
+    const d = ensureDate(tanggal);
+    return calculateHariNaas(d);
+  },
+
+  /**
+   * Mendapatkan semua daftar Hari Naas.
+   */
+  getAllHariNaas: (): HariNaasResult[] => getAllHariNaas(),
+
+  /**
+   * Menghitung Siklus Rejeki (Pal Srigati).
+   * @param tanggal - Tanggal lahir.
+   * @param maxUsia - Usia maksimum (default: 80).
+   * @returns - Informasi Siklus Rejeki lengkap dengan grafik.
+   */
+  siklusRejeki: (tanggal: Date | string | number, maxUsia?: number): SiklusRejekiResult => {
+    const d = ensureDate(tanggal);
+    return calculateSiklusRejeki(d, maxUsia);
+  },
+
+  /**
+   * Mendapatkan level rejeki untuk usia tertentu.
+   * @param tanggal - Tanggal lahir.
+   * @param usia - Usia yang ingin dicek.
+   * @returns - Level rejeki dan kondisi.
+   */
+  rejekiByUsia: (tanggal: Date | string | number, usia: number): { level: number; kondisi: string } => {
+    const d = ensureDate(tanggal);
+    return getRejekiByUsia(d, usia);
+  },
+
+  /**
+   * Menghitung Lintang (Zodiak Jawa) - Bintang Lahir.
+   * @param tanggal - Tanggal lahir.
+   * @returns - Informasi Lintang lengkap.
+   */
+  lintang: (tanggal: Date | string | number): LintangResult => {
+    const d = ensureDate(tanggal);
+    return calculateLintang(d);
+  }
 };
 
 export default primbon;
@@ -308,6 +356,20 @@ export {
   translateHari,
   translatePasaran,
   
+  // Hari Naas (NEW)
+  calculateHariNaas,
+  getAllHariNaas,
+  HARI_NAAS_NAMES,
+  
+  // Siklus Rejeki (NEW)
+  calculateSiklusRejeki,
+  getRejekiByUsia,
+  
+  // Lintang / Zodiak Jawa (NEW)
+  calculateLintang,
+  getLintangByYear,
+  LINTANG_NAMES,
+  
   // Kitab References
   KITAB_REFERENCES,
   getKitabInfo,
@@ -320,5 +382,9 @@ export {
   type Locale,
   type LocaleStrings,
   type KitabReference,
-  type KitabInfo
+  type KitabInfo,
+  type HariNaasResult,
+  type SiklusRejekiResult,
+  type RejekiPoint,
+  type LintangResult
 };
