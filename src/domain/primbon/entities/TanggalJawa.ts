@@ -11,7 +11,8 @@ export class TanggalJawa {
     if (tanggal < 1 || tanggal > 30) {
       throw new Error('Tanggal Jawa harus antara 1-30');
     }
-    if (tahun < 0) {
+    // Allow negative years but warn - some historical dates may need this
+    if (tahun < -100) {
       throw new Error('Tahun Jawa tidak boleh negatif');
     }
   }

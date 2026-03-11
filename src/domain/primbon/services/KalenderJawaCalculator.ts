@@ -50,7 +50,16 @@ export class KalenderJawaCalculator {
         }
       }
     } else {
-      remainingDays = Math.abs(remainingDays);
+      // For dates before anchor, we need special handling
+      // Start from beginning of previous month
+      currentBlnIdx--;
+      if (currentBlnIdx < 0) {
+        currentBlnIdx = 11;
+        currentThn--;
+      }
+      currentTgl = this.getMonthLength(currentBlnIdx, currentThn);
+      
+      remainingDays = Math.abs(remainingDays) - 1;
       while (remainingDays > 0) {
         if (remainingDays < currentTgl) {
           currentTgl -= remainingDays;
