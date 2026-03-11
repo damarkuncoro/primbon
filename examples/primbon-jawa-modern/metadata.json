@@ -1,0 +1,5 @@
+{
+  "name": "Primbon Jawa Modern",
+  "description": "Aplikasi ramalan dan perhitungan Weton Jawa menggunakan library @damarkuncoro/primbon.",
+  "requestFramePermissions": []
+}

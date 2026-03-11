@@ -4,18 +4,18 @@
 [![Build Status](https://img.shields.io/github/actions/workflow/status/damarkuncoro/primbon/test.yml?branch=main)](https://github.com/damarkuncoro/primbon/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Pustaka JavaScript modern, andal, dan tanpa dependensi untuk semua kebutuhan perhitungan Primbon Jawa. Bekerja secara offline dengan akurasi yang teruji.
+Pustaka JavaScript modern, andal, dan tanpa dependensi untuk semua kebutuhan perhitungan Primbon Jawa. Bekerja secara offline dengan akurasi yang teruji berdasarkan referensi kitab klasik seperti *Betaljemur Adammakna*.
 
 ## Mengapa Memilih `@damarkuncoro/primbon`?
 
 Ada banyak library primbon di luar sana, namun `@damarkuncoro/primbon` dirancang untuk menjadi pilihan profesional yang stabil dan dapat diandalkan.
 
-*   ✅ **Bekerja 100% Offline**: Tidak ada panggilan ke server eksternal. Semua perhitungan dan data sudah termasuk di dalam paket, menjamin kecepatan, privasi, dan keandalan bahkan tanpa koneksi internet.
-*   ✅ **API Modern & Fleksibel**: Mendukung penuh TypeScript, ES Modules (`import`), dan CommonJS (`require`) secara *native*. Dapatkan *auto-completion* dan keamanan tipe di editor Anda.
-*   ✅ **Stabil dan Teruji**: Dilengkapi dengan puluhan *unit test* untuk memastikan setiap fungsi memberikan hasil yang akurat dan konsisten.
-*   ✅ **Fitur Paling Komprehensif**: Menyediakan perhitungan inti primbon Jawa yang tidak ditemukan di library lain, mulai dari Weton, Kalender Jawa, hingga Pranata Mangsa dan Garis Hidup.
-*   ✅ **Tanpa Dependensi**: Ukuran paket kecil dan tidak akan menambah beban dependensi pada proyek Anda.
-*   ✅ **Clean Architecture**: Arsitektur berlapis dengan Domain-Driven Design untuk fleksibilitas dan testability maksimal.
+*   ✅ **Bekerja 100% Offline**: Tidak ada panggilan ke server eksternal. Semua perhitungan dan data sudah termasuk di dalam paket.
+*   ✅ **Dukungan Multi-Bahasa (i18n)**: Output tersedia dalam Bahasa Indonesia (id), Jawa (jv), dan Inggris (en).
+*   ✅ **API Modern & Fleksibel**: Mendukung penuh TypeScript, ES Modules (`import`), dan CommonJS (`require`).
+*   ✅ **Stabil dan Teruji**: Dilengkapi dengan puluhan *unit test* untuk memastikan akurasi data.
+*   ✅ **Fitur Terlengkap**: Menyediakan siklus Paringkelan (Sadwara), Padewan (Asatawara), Padangon (Sangawara), hingga Pawukon.
+*   ✅ **Referensi Terpercaya**: Data divalidasi berdasarkan kitab *Betaljemur Adammakna* dan tradisi Jawa yang pakem.
 
 ## Instalasi
 
@@ -27,91 +27,103 @@ npm install @damarkuncoro/primbon
 
 | Fitur | Deskripsi |
 | :--- | :--- |
-| **Weton** | Menghitung hari, pasaran, weton, dan neptu dari tanggal Masehi. |
-| **Kalender Jawa** | Mengonversi tanggal Masehi ke tanggal, bulan, dan tahun Jawa. |
-| **Pranata Mangsa** | Menentukan Mangsa (kalender musim) berdasarkan tanggal. |
-| **Watak** | Menganalisis karakter berdasarkan weton, tanggal, dan bulan Jawa. |
-| **Jodoh** | Menghitung kecocokan jodoh berdasarkan wetun kedua pasangan. |
-| **Hari Baik** | Menentukan rekomendasi hari baik untuk berbagai keperluan. |
-| **Garis Hidup** | Menghitung angka numerologi (garis hidup) dari tanggal lahir. |
-| **Wuku** | Menentukan Wuku dalam siklus 210 hari Pawukon. |
-| **Selapan** | Menghitung siklus 35 harian (Selapanan). |
-| **Pasaran & Neptu** | Fungsi utilitas untuk menghitung pasaran atau neptu secara terpisah. |
+| **Weton** | Hari, pasaran, weton, dan neptu lengkap. |
+| **Kalender Jawa** | Konversi Masehi ke tanggal, bulan, tahun Jawa, dan nama tahun (Dal, Be, dsb). |
+| **Pranata Mangsa** | Kalender musim Jawa (Kasa, Karo, Katelu, dsb) beserta ciri-cirinya. |
+| **Siklus Lanjutan** | Mendukung Sadwara (6 harian), Asatawara (8 harian), dan Sangawara (9 harian). |
+| **Pawukon** | Perhitungan Wuku (30 wuku) dan siklus Selapan (35 harian). |
+| **Watak & Jodoh** | Analisis karakter berdasarkan weton dan perhitungan kecocokan pasangan. |
+| **Garis Hidup** | Numerologi Jawa berdasarkan tanggal lahir. |
+| **Hari Baik** | Rekomendasi hari untuk hajat tertentu (nikah, pindah rumah, usaha). |
+| **i18n** | Dukungan lokalisasi untuk semua output teks. |
 
 ## Contoh Penggunaan
 
-### ES Modules (`import`)
+### Perhitungan Weton & Kalender Jawa
 
 ```javascript
 import primbon from '@damarkuncoro/primbon';
 
-// Menghitung Weton
-const weton = primbon.weton('1990-08-17');
+// 1. Mendapatkan Weton
+const weton = primbon.weton('1945-08-17');
 console.log(weton);
-// Output: { hari: 'Jumat', pasaran: 'Pahing', weton: 'Jumat Pahing', neptu: 15 }
+// Output: { hari: 'Jumat', pasaran: 'Legi', weton: 'Jumat Legi', neptu: 11 }
 
-// Menghitung kecocokan jodoh
-const jodoh = primbon.jodoh('1990-08-17', '1995-01-10');
-console.log(jodoh.kategori, ':', jodoh.arti);
-// Output: Padu : Sering mengalami pertengkaran, namun tidak sampai bercerai.
+// 2. Konversi ke Kalender Jawa
+const jawa = primbon.kalenderJawa('1945-08-17');
+console.log(jawa);
+// Output: { tanggal: 9, bulan: 'Pasa', tahun: 1876, namaTahun: 'Alip' }
 ```
 
-### CommonJS (`require`)
+### Siklus Paringkelan, Padewan, & Padangon
 
 ```javascript
-const primbon = require('@damarkuncoro/primbon').default;
+const tgl = '2024-03-11';
 
-// Mengonversi ke Kalender Jawa
-const kalender = primbon.kalenderJawa('1986-11-03');
-console.log(kalender);
-// Output: { tanggal: 1, bulan: 'Mulud', tahun: 1919, namaTahun: 'Dal' }
+// Sadwara (Paringkelan - 6 harian)
+const sadwara = primbon.sadwara(tgl);
+console.log(`Sadwara: ${sadwara.nama} (${sadwara.watak})`);
+
+// Asatawara (Padewan - 8 harian)
+const asatawara = primbon.asatawara(tgl);
+console.log(`Asatawara: ${asatawara.nama}`);
+
+// Sangawara (Padangon - 9 harian)
+const sangawara = primbon.sangawara(tgl);
+console.log(`Sangawara: ${sangawara.nama}`);
+```
+
+### Internasionalisasi (i18n)
+
+```javascript
+import primbon from '@damarkuncoro/primbon';
+
+// Set ke Bahasa Jawa
+primbon.setLocale('jv');
+const wetonJawa = primbon.weton('2024-03-11');
+console.log(wetonJawa.hari); // "Senen"
+
+// Set ke Bahasa Inggris
+primbon.setLocale('en');
+console.log(primbon.weton('2024-03-11').hari); // "Monday"
+```
+
+### Kecocokan Jodoh
+
+```javascript
+const hasilJodoh = primbon.jodoh('1990-01-01', '1992-05-20');
+console.log(`Kategori: ${hasilJodoh.kategori}`);
+console.log(`Arti: ${hasilJodoh.arti}`);
 ```
 
 ## Clean Architecture API (Advanced)
 
-Untuk penggunaan yang lebih fleksibel dan dapat diuji, Anda dapat menggunakan API Clean Architecture:
+Untuk integrasi yang lebih mendalam atau pengujian unit, Anda dapat mengakses komponen internal:
 
 ```javascript
-import {
-  // Domain - Entity & Services (tanpa dependensi eksternal)
-  Weton,
-  WetonCalculator,
-  wetonCalculator,
-  
-  // Application - Use Cases
-  WatakUseCase,
-  JodohUseCase,
-  
-  // Infrastructure - Implementasi Repository
-  JsonWatakRepository,
-  JsonJodohRepository
+import { 
+  WetonCalculator, 
+  JsonWatakRepository, 
+  WatakUseCase 
 } from '@damarkuncoro/primbon/clean';
 
-// Gunakan langsung tanpa dependensi (paling sederhana)
-const weton = wetonCalculator.calculate(new Date('1990-08-17'));
-console.log(weton.toString()); // "Jumat Pahing"
-
-// Atau gunakan Use Cases dengan Dependency Injection
 const watakRepo = new JsonWatakRepository();
-const jodohRepo = new JsonJodohRepository();
-
 const watakUseCase = new WatakUseCase(watakRepo);
-const jodohUseCase = new JodohUseCase(jodohRepo);
 
-const watak = watakUseCase.getWatak(new Date('1990-08-17'));
-const jodoh = jodohUseCase.calculate(new Date('1990-08-17'), new Date('1995-01-10'));
+const watak = watakUseCase.getWatak(new Date());
+console.log(watak.sifat);
 ```
 
-Lihat [docs/CLEAN_ARCHITECTURE.md](docs/CLEAN_ARCHITECTURE.md) untuk dokumentasi lengkap.
+## Referensi Kitab
 
-## Rencana Pengembangan (Roadmap)
+Library ini merujuk pada sumber-sumber otoritatif:
+- **Kitab Betaljemur Adammakna** (KPH Tjakraningrat)
+- **Kitab Primbon Lukmanakim**
+- **Kitab Japa Mantra**
 
-Proyek ini dikelola secara aktif. Beberapa rencana untuk masa depan:
-*   [x] Implementasi Clean Architecture dan DDD
-*   [ ] Melengkapi data deskripsi watak untuk semua kombinasi weton.
-*   [ ] Menambahkan fungsi untuk menghasilkan representasi visual dari siklus Pawukon.
-*   [ ] Dukungan internasionalisasi (i18n) untuk output dalam Bahasa Inggris.
+Gunakan `primbon.getKitabInfo('betaljemur')` untuk melihat detail referensi yang digunakan.
 
 ## Lisensi
 
-Proyek ini dilisensikan di bawah [Lisensi MIT](LICENSE).
+[MIT License](LICENSE) © 2024 Damar Kuncoro
+
