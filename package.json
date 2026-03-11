@@ -25,7 +25,9 @@
     "build": "tsup",
     "dev": "tsup --watch",
     "test": "node --test test/*.test.js",
-    "prepublishOnly": "npm run build && npm test"
+    "prepublishOnly": "npm run build && npm test",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "keywords": [
     "jawa",
@@ -51,7 +53,22 @@
   },
   "homepage": "https://github.com/damarkuncoro/primbon#readme",
   "devDependencies": {
+    "@chromatic-com/storybook": "^5.0.1",
+    "@storybook/addon-a11y": "^10.2.17",
+    "@storybook/addon-docs": "^10.2.17",
+    "@storybook/addon-onboarding": "^10.2.17",
+    "@storybook/addon-vitest": "^10.2.17",
+    "@storybook/react": "^10.2.17",
+    "@storybook/react-vite": "^10.2.17",
     "@types/node": "^22.13.9",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitest/browser-playwright": "4.0.18",
+    "@vitest/coverage-v8": "4.0.18",
+    "playwright": "^1.58.2",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "storybook": "^10.2.17",
     "tsup": "^8.4.0",
     "typescript": "^5.8.2"
   },

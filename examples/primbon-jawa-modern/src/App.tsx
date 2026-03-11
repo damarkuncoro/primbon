@@ -867,7 +867,7 @@ export default function App() {
               exit={{ opacity: 0, x: -20 }}
               className="space-y-8"
             >
-              <div className="bg-gradient-to-br from-[#5A5A40] to-[#3d3d2d] text-white rounded-[32px] p-10 shadow-lg">
+              <div className="bg-linear-to-br from-[#5A5A40] to-[#3d3d2d] text-white rounded-[32px] p-10 shadow-lg">
                 <h3 className="text-xs uppercase tracking-[0.3em] text-white/60 mb-6 font-bold">Lintang (Bintang Lahir)</h3>
                 <div className="flex flex-col md:flex-row gap-8 items-center">
                   <div className="w-32 h-32 bg-white/10 rounded-full flex items-center justify-center">
@@ -875,7 +875,7 @@ export default function App() {
                   </div>
                   <div className="flex-1 text-center md:text-left">
                     <p className="text-5xl font-bold mb-2">{lintang.nama}</p>
-                    <p className="text-white/70 italic">{lintang.candra}</p>
+                    <p className="text-white/70 italic">{lintang.deskripsi}</p>
                   </div>
                 </div>
               </div>
@@ -923,11 +923,11 @@ export default function App() {
                 <h3 className="text-xs uppercase tracking-[0.3em] text-[#5A5A40] mb-6 font-bold">Hari Naas (Hari Kewaspadaan)</h3>
                 <div className="text-center mb-8">
                   <p className="text-5xl font-bold text-[#5A5A40] mb-2">{hariNaas.nama}</p>
-                  <p className="text-[#5A5A40]/60 italic">{hariNaas.candra}</p>
+                  <p className="text-[#5A5A40]/60 italic">{hariNaas.deskripsi}</p>
                 </div>
                 <div className="bg-[#f5f5f0] rounded-2xl p-6">
                   <h4 className="text-sm font-bold mb-3">Peringatan:</h4>
-                  <p className="text-[#2c2c24]/80 leading-relaxed">{hariNaas.peringatan}</p>
+                  <p className="text-[#2c2c24]/80 leading-relaxed">{hariNaas.saran}</p>
                 </div>
               </div>
             </motion.div>

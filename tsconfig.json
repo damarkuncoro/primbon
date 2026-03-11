@@ -3,7 +3,7 @@
     "target": "ESNext",
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
-    "lib": ["ESNext"],
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
     "declaration": true,
     "declarationMap": true,
     "sourceMap": true,
@@ -14,8 +14,11 @@
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
     "allowJs": true,
-    "rootDir": "src"
+    "rootDir": "src",
+    "jsx": "react-jsx",
+    "isolatedModules": true,
+    "noEmit": true
   },
   "include": ["src/**/*"],
-  "exclude": ["node_modules", "dist", "lib", "test", "tests", "src/**/*.test.ts"]
+  "exclude": ["node_modules", "dist", "lib", "test", "tests", "src/**/*.test.ts", "stories"]
 }
