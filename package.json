@@ -1,6 +1,6 @@
 {
   "name": "@damarkuncoro/primbon",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Library JavaScript berbasis Node.js yang menyediakan algoritma kalender Jawa, weton, primbon, dan perhitungan tradisional Jawa.",
   "main": "./lib/cjs/index.cjs",
   "module": "./lib/esm/index.js",
